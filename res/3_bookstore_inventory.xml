@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bookstore>
+    <book>
+        <title lang="en">Learning XML</title>
+        <author>John Doe</author>
+        <year>2022</year>
+        <price>29.99</price>
+        <publisher>Example Publishing</publisher>
+    </book>
+    <book>
+        <title lang="en">Mastering XML</title>
+        <author>Jane Smith</author>
+        <year>2023</year>
+        <price>39.99</price>
+        <publisher>XML Press</publisher>
+    </book>
+    <book>
+        <title lang="fr">Apprendre XML</title>
+        <author>Jean Dupont</author>
+        <year>2021</year>
+        <price>25.99</price>
+        <publisher>Éditions Exemple</publisher>
+    </book>
+</bookstore>

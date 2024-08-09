@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<employees>
+    <employee id="001">
+        <name>John Doe</name>
+        <department>IT</department>
+        <role>Software Developer</role>
+        <contact>
+            <email>john.doe@company.com</email>
+            <phone>+1234567890</phone>
+        </contact>
+    </employee>
+    <employee id="002">
+        <name>Jane Smith</name>
+        <department>HR</department>
+        <role>HR Manager</role>
+        <contact>
+            <email>jane.smith@company.com</email>
+            <phone>+0987654321</phone>
+        </contact>
+    </employee>
+    <employee id="003">
+        <name>Michael Brown</name>
+        <department>Finance</department>
+        <role>Accountant</role>
+        <contact>
+            <email>michael.brown@company.com</email>
+            <phone>+1122334455</phone>
+        </contact>
+    </employee>
+</employees>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library>
+    <section name="Fiction">
+        <book>
+            <title>The Great Gatsby</title>
+            <author>F. Scott Fitzgerald</author>
+            <year>1925</year>
+            <isbn>9780743273565</isbn>
+        </book>
+        <book>
+            <title>1984</title>
+            <author>George Orwell</author>
+            <year>1949</year>
+            <isbn>9780451524935</isbn>
+        </book>
+    </section>
+    <section name="Non-Fiction">
+        <book>
+            <title>Sapiens: A Brief History of Humankind</title>
+            <author>Yuval Noah Harari</author>
+            <year>2011</year>
+            <isbn>9780062316097</isbn>
+        </book>
+        <book>
+            <title>Educated</title>
+            <author>Tara Westover</author>
+            <year>2018</year>
+            <isbn>9780399590504</isbn>
+        </book>
+    </section>
+    <section name="Science">
+        <book>
+            <title>A Brief History of Time</title>
+            <author>Stephen Hawking</author>
+            <year>1988</year>
+            <isbn>9780553380163</isbn>
+        </book>
+        <book>
+            <title>The Selfish Gene</title>
+            <author>Richard Dawkins</author>
+            <year>1976</year>
+            <isbn>9780198788607</isbn>
+        </book>
+    </section>
+</library>
