@@ -2,24 +2,44 @@
 #include <fstream>
 #include <vector>
 
+#include "include/xmlnode.cpp"
+
 class parser {
 private:
     std::ifstream inputFile;
 public:
+    // Data members
+    xmlNode* root;
+
     // Member functions
-    void read_xml(const std::string&);
     std::vector<char>* parse_to_char_vector();
+
+    void read_xml(const std::string&);
+    xmlNode* xmlParser();
 
     // Default constructor
     parser() {
         std::cout << "Default parser object initialized..\n";
+        this->root = new xmlNode();
+    }
+
+    // Parameterized constructor
+    parser(xmlNode* root) {
+        if (!root) {
+            std::cerr << "The xmlNode object cannot be initialized, the object does not exist.\n";
+        }
+        else this->root = root;
+        std::cout << "Parameterized parser object created with root node.\n";
     }
 
     // Destructor
     ~parser() {
+        // Close file
         if (inputFile.is_open()) {
             inputFile.close();
         }
+        // Delete root node
+        delete this->root;
     }
 };
 
@@ -52,17 +72,34 @@ std::vector<char>* parser::parse_to_char_vector() {
     return char_parsed_xml;
 }
 
+xmlNode* parser::xmlParser() {
+    char ch, delim;
+    std::string tag;
+    while(true) {
+        this->inputFile.get(ch);
+
+        if(ch=='<'){
+            delim = '>';
+            std::getline(inputFile, tag, delim);
+            std::cout << ch << " " << tag << '\n';
+
+            xmlNode* node = new xmlNode();
+        }
+
+        if (inputFile.eof()) {
+            std::cout << "End of file reached.\n";
+            break;
+        } else if (inputFile.fail()) {
+            std::cerr << "Error reading file\n";
+            break;
+        }
+    }
+    return nullptr;
+}
+
 int main() {
     parser parserObj;
     parserObj.read_xml("res/1_contact_info.xml");
-    std::vector<char>* parsedVector = parserObj.parse_to_char_vector();
-
-    if (parsedVector) {
-        for (char ch : *parsedVector) {
-            std::cout << " | " << ch;
-        }
-        delete parsedVector; // Clean up allocated memory
-    }
-
+    parserObj.xmlParser();
     return 0;
 }
